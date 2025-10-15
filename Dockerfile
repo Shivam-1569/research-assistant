@@ -25,6 +25,6 @@ RUN ls -l /app/target/
 # Package stage
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/Assistant-0.0.1-SNAPSHOT.jar.original /app/Assistant.jar
+COPY --from=build /app/target/Assistant-0.0.1-SNAPSHOT.jar /app/Assistant.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","Assistant.jar"]
